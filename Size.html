@@ -3,36 +3,50 @@
 <head>
 <title>Black Swan</title>
 <link rel="stylesheet" href="styles.css">
+
+    <script>        
+    function calculate() {        
+        var data = document.getElementById("sizeData").value;       
+         if (data < 35) {           
+             document.getElementById("answer").innerHTML = "Your size is Small";            }      
+          else if (data > 45) {           
+             document.getElementById("answer").innerHTML = "Your size is a Large";    
+           } else {           
+             document.getElementById("answer").innerHTML = "Your size is a Medium";         
+           }        
+    }   
+                
+     </script>
+
 </head>
 
 <body>
 
     <div class="container">
-    <div class="thing">
-        
-
-</div>   
-    <div class="box1">
         <img class=logo src="Black Swan/swanlogo2.png">
-        <div class="links">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="Gallery.html">Gallery</a>
-                <a href="Size.html">Size</a>
-            </nav>
+        <div class="box1">
+            <div class="links">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="Gallery.html">Gallery</a>
+                    <a href="Size.html">Size</a>
+                </nav>
+            </div>
         </div>
     </div>
-    <div class="box3">
-        <img class=product1 src="Products/white hoodie.png">
-    </div>
 
-    <div class="box2"><h1>
-        SALE 25% OFF ALL ITEMS
-    </h1>
-    
-    </div>
-   
+<div class="calc">
+
+    <h4>Waist to Shoulder Length in cm Size Calculator</h4>
+
+    <input type="number" name="size" id="sizeData" value="50">
+
+    <button type="submit" onclick="calculate()">Submit</button>
+
+    <p3 id="answer"></p3>
+
 </div>
-</body>
+
+</body> 
 
 
