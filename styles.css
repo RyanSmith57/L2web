@@ -1,143 +1,160 @@
  @font-face {
+     /* 1st font */
      font-family: solid;
      src: url(Font/kg_happy/KGHAPPYSolid.ttf)
  }
 
  @font-face {
-    font-family: font;
-    src: url(Font/Lemon\ Tea.ttf)
+     /* 2nd font */
+     font-family: font;
+     src: url(Font/Lemon\ Tea.ttf)
+ }
+
+ html {
+     /* background */
+     background-image: url('black\ and\ white\ background.jpg');
+     background-size: 100vw 100vh;
+ }
+
+ .container {
+     /*  container for logo and links*/
+     display: grid;
+     grid-template-columns: 1fr 4fr 0.3fr 4fr 1fr;
+     grid-template-rows: 30px 100px;
+     grid-gap: 10px;
+ }
+
+ .box1 {
+     /* navs top bar with page links */
+     display: grid;
+     grid-template-columns: 1fr 2fr;
+
+     background-color: black;
+     grid-column: 2/5;
+     grid-row: 2/2;
+     border: 10px solid grey;
+ }
+
+ .box2 {
+     /* left side box where i put my sale information */
+     background-color: black;
+     border: 10px solid grey;
+     font-family: solid;
+     height: 60vh;
 
  }
- html {
-    background-image: url('black\ and\ white\ background.jpg');
-    background-size: 100vw 100vh;
-} 
 
-.container {
-    display:grid;
-    grid-template-columns: 1fr 4fr 0.3fr 4fr 1fr;
-    grid-template-rows: 30px 100px;
-    grid-gap: 10px;
-}
-.thing {
-    grid-row: 1/3;
-    display: grid;
-    grid-template-columns:1fr;
-    grid-template-rows: auto;
-    justify-items: center;
-}
-.box1 {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+ .box3 {
+     /* right box where i put an advertisment for my hoodie*/
+     background-color: black;
+     border: 10px solid grey;
+     height: 60vh;
+ }
 
-    background-color:black;
-    grid-column: 2/5;
-    grid-row: 2/2;
-    border: 10px solid grey;
-}
+ .box {
+     /* box grey border color */
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     background-color: black;
+     grid-column: 2/5;
+     grid-row: 4/4;
+     border: 10px solid grey;
+ }
 
-.box2 { 
-    background-color: black;
-    border: 10px solid grey;
-    font-family: solid;
-    height: 60vh;
-    
-}
+ .logo {
+     /* logo box */
+     width: 22%;
+     grid-column: 2/3;
+     grid-row: 2/3;
+     align-self: center;
+     z-index: 1;
+     margin-left: 20px;
+ }
 
-.box3 {
-    background-color:black; 
-    border: 10px solid grey;
-    height: 60vh;
-}
+ .logo2 {
+     /* i used this to get my logo to sit on the box rather than in it */
+     width: 22%;
+     grid-column: 1/2;
+     grid-row: 1/2;
+     align-self: center;
+     z-index: 1;
+     margin-left: 20px;
+ }
 
-.box { 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color:black; 
-    grid-column: 2/5;
-    grid-row: 4/4;
-    border: 10px solid grey;
-}
+ .product1 {
+     /* 1st product */
+     height: 100%;
 
-.logo {
-    width: 22%;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    align-self: center;
-    z-index: 1;
-    margin-left: 20px;
-}
+ }
 
-.logo2 {
-    width: 22%;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    align-self: center;
-    z-index: 1;
-    margin-left: 20px;
-}
+ .pro1 {
+     /* 1st product white hoodie */
+     height: 50%;
+ }
 
-.product1 {
-    height: 100%;
- 
-}
+ .links {
+     /* navigation */
+     justify-self: right;
+     font-size: 4vh;
+     grid-column: 2/3;
+     align-self: center;
+ }
 
-.pro1 {
-    height: 50%;
-}
+ nav a {
+     /* */
+     color: white;
+     text-decoration: none;
+     font-family: font;
 
-.links {
- justify-self: right;
- font-size: 350%;
-    grid-column: 2/3;
-    align-self: center;
-}
+ }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-family: font;
+ a:hover {
+     /* hover state for navigation */
+     color: grey;
+ }
 
-}
+ h1 {
+     color: white;
+     grid-row: 2/3;
+     grid-column: 2/3;
+ }
 
-a:hover {
-    color: grey;
-}
-h1{
-   color: white;
-   grid-row: 2/3;
-   grid-column: 2/3;
-}
+ section,
+ .stuff {
+     /* products */
+     width: 75%;
+     margin: 30px auto;
+     display: grid;
+     grid-template-columns: 1fr 2fr;
+     grid-gap: 10px;
 
-section , .stuff {
-    width: 75%;
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 10px;
+     background-color: black;
+     border: 6px solid grey;
+ }
 
-    background-color: black;
-    border: 6px solid grey;
-}
+ .stuff {
+     /* class for displayed products */
+     grid-template-columns: 1fr 1fr 1fr;
+     text-align: center;
+ }
 
-.stuff {
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
-}
+ li img {
+     width: 100%;
+ }
 
-li img {
-    width: 100%;
-}
+ li p {
+     color: white;
+ }
 
-li p {
-    color: white;
-}
+ .calc {
+     /* size calculator */
+     color: white;
+     width: 50%;
+     margin: 20px auto;
+     font-family: solid;
+     grid-row: 1/1;
+     display: grid;
+     grid-template-columns: 1fr;
 
-.calc{ 
-    color: white;
-    font-family: solid;
-    grid-row: 1/1;
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
- 
-}
+
+ }
