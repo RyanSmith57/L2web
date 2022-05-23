@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 
+<!-- The title and links to stylesheet -->
 <head>
-<title>Black Swan</title>
-<link rel="stylesheet" href="styles.css">
-
-    <script>        
-    function calculate() {        
-        var data = document.getElementById("sizeData").value;       
-         if (data < 35) {           
-             document.getElementById("answer").innerHTML = "Your size is Small";            }      
-          else if (data > 45) {           
-             document.getElementById("answer").innerHTML = "Your size is a Large";    
-           } else {           
-             document.getElementById("answer").innerHTML = "Your size is a Medium";         
-           }        
-    }   
-                
-     </script>
-
+    <title>Black Swan</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
 </head>
+
+ <!-- size calculator -->
+    <script>
+    function calculate() {
+        var data = document.getElementById("sizeData").value;
+        if (data < 35) {
+            document.getElementById("answer").innerHTML = "Your_size_is_Small";
+        } else if (data > 45) {
+            document.getElementById("answer").innerHTML = "Your_size_is_a_Large";
+        } else {
+            document.getElementById("answer").innerHTML = "Your_size_is_a_Medium";
+        }
+    }
+</script>
 
 <body>
 
+     <!-- Logo on nav bar -->
+
     <div class="container">
-        <img class=logo src="Black Swan/swanlogo2.png">
+        <img class=logo src="BlackSwan/swanlogo2.png" alt="alt">
         <div class="box1">
             <div class="links">
                 <nav>
@@ -34,19 +37,17 @@
             </div>
         </div>
     </div>
+ <!-- size calculator -->
+    <div class="calc">
 
-<div class="calc">
+        <h4>Waist to Shoulder Length in cm Size Calculator</h4>
 
-    <h4>Waist to Shoulder Length in cm Size Calculator</h4>
+        <input type="number" name="size" id="sizeData" value="50">
 
-    <input type="number" name="size" id="sizeData" value="50">
+        <button type="submit" onclick="calculate()">Submit</button>
 
-    <button type="submit" onclick="calculate()">Submit</button>
+        <h2 id="answer"></h2>
 
-    <p3 id="answer"></p3>
+    </div>
 
-</div>
-
-</body> 
-
-
+</body>
